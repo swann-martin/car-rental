@@ -41,49 +41,153 @@
             Vous êtes au bon endroit
           </h1>
 
-          <div class="rent">
-            <form>
-              <label for="carType">Quel type de véhicule?</label>
+          <form class="rent">
+            <!-- partie seletion de type de voiture -->
+            <label for="carType">Quel type de véhicule?</label>
+
+            <div class="selectOptionCars">
+              <div class="optionCar">
+                <button>
+                  <img
+                    src="https://static.europcar.com/_nuxt/img/cars-filter.cf7c3fd.png"
+                    alt="car"
+                  />
+                  <span>Voiture</span>
+                </button>
+              </div>
+              <div class="optionTruck">
+                <button>
+                  <img
+                    src="https://static.europcar.com/_nuxt/img/vans-trucks-filter.ae42ce1.png"
+                    alt="truck"
+                  />
+                  <span>Utilitaire</span>
+                </button>
+              </div>
+              <div class="optionPrestige">
+                <button>
+                  <img
+                    src="https://static.europcar.com/_nuxt/img/prestige-filter.1a1faa9.png"
+                    alt="prestige"
+                  />
+                  <span>Prestige</span>
+                </button>
+              </div>
+            </div>
+            <!-- partie dates -->
+            <div class="dates">
+              <div class="col1">
+                <div class="col1__labels">
+                  <label>Départ et lieu de retour</label>
+                  <div class="checkReturnContainer">
+                    <input
+                      type="checkbox"
+                      id="checkReturn"
+                      name="checkReturn"
+                      checked
+                    />
+                    <label for="checkReturn" class="checkReturnLabel"
+                      >Retour dans la même agence</label
+                    >
+                  </div>
+                </div>
+                <input type="text" placeholder="Départ et lieu de retour" />
+              </div>
+
+              <div class="col2">
+                <label for="dDepart">Date et heure de départ</label>
+                <div class="inputContainer">
+                  <input
+                    type="date"
+                    name="dDepart"
+                    id="dDepart"
+                    placeholder="Date de départ"
+                  />
+                  <input
+                    type="time"
+                    name="hDepart"
+                    id="hDepart"
+                    placeholder="Heure"
+                  />
+                </div>
+              </div>
+              <div class="col3">
+                <label for="dReturn">Date et heure de retour</label>
+                <div class="inputContainer">
+                  <input
+                    type="date"
+                    name="dReturn"
+                    id="dReturn"
+                    placeholder="Date de retour"
+                  />
+
+                  <input
+                    type="time"
+                    name="hReturn"
+                    id="hReturn"
+                    placeholder="Heure"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- partie age -->
+            <div class="details">
+              <div>
+                <label for="age">J'ai</label>
+                <select name="age" id="age">
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option selected value="23">26+</option>
+                </select>
+              </div>
+              <div>
+                <label for="country">Je réside</label>
+                <select name="country" id="country">
+                  <option value=""></option>
+                </select>
+              </div>
 
               <div>
-                <label>Départ et lieu de retour</label>
-
-                <input
-                  type="checkbox"
-                  id="checkReturn"
-                  name="checkReturn"
-                  checked
-                />
-                <label for="checkReturn">Retour dans la même agence</label>
+                <input type="checkbox" id="discount" />
+                <label for="discount"
+                  >J'ai un tarif négocié <i class="fas fa-info-circle"></i
+                ></label>
               </div>
-              <input type="text" placeholder="Départ et lieu de retour" />
-
-              <label>Date et heure de départ</label>
-              <label>Date et heure de retour</label>
-              <label for="age">J'ai</label>
-              <select name="age" id="age">
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option selected value="23">26+</option>
-              </select>
-
-              <label for="country">Je réside</label>
-              <select name="country" id="country">
-                <option value=""></option>
-              </select>
-
-              <input type="checkbox" id="discount" />
-              <label for="discount">J'ai un tarif négocié</label>
-
               <button>Rechercher</button>
-            </form>
-          </div>
+            </div>
+          </form>
+
+          <nav class="navBottom">
+            <ul>
+              <li>
+                <a href="#"
+                  >Gérer votre réservation <i class="fas fa-arrow-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Remise Privilege <i class="fas fa-arrow-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Voir tous les bons plans <i class="fas fa-arrow-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Europcar pour les sociétés <i class="fas fa-arrow-right"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
     </section>

@@ -18,6 +18,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* header */
@@ -31,7 +32,7 @@ header {
   width: 80%;
   height: 100%;
   margin: auto;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1500754171074-1d8f047dfa98?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
       no-repeat center/cover;
 }
@@ -42,7 +43,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 0;
   color: white;
 }
 .navLeft {
@@ -62,12 +63,16 @@ nav li {
   margin-left: 2rem;
 }
 
-nav li:hover {
-  margin-left: 2rem;
+nav a {
+  padding-bottom: 0.5rem;
+  transition: all 0.2s ease-in;
+}
+
+nav a:hover {
   border-bottom: white solid 2px;
 }
 
-/* main */
+/* main section in header */
 .main-section {
   width: 80%;
 }
@@ -79,12 +84,132 @@ h1 {
   font-weight: bold;
 }
 
-.rent {
+form {
   margin-top: 3rem;
   background: white;
-  border-radius: 20px;
+  border-radius: 10px;
   height: 300px;
   padding: 2rem;
 }
 
+label {
+  font-weight: bold;
+}
 
+/* Form section bouton selection du type de véhicule */
+.selectOptionCars {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px 0px 0px 10px;
+  margin-bottom: 2rem;
+}
+
+.selectOptionCars img {
+  width: 50%;
+}
+
+button {
+  background-color: rgb(246, 246, 100);
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+.selectOptionCars button {
+  background-color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  height: 5rem;
+  border: none;
+}
+
+/* Selection des dates et lieux de départ / retour  */
+
+.dates {
+  display: flex;
+}
+
+.col1 {
+  width: 50%;
+}
+.col2 {
+  width: 23%;
+  margin-left: 2%;
+}
+.col3 {
+  width: 23%;
+  margin-left: 2%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+input {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.inputContainer input {
+  border: solid grey 1px;
+}
+
+#dDepart {
+  border-radius: 10px 0 0 10px;
+}
+#hDepart {
+  border-radius: 0 10px 10px 0px;
+  border-left: none;
+}
+#dReturn {
+  border-radius: 10px 0 0 10px;
+}
+#hReturn {
+  border-radius: 0 10px 10px 0px;
+  border-left: none;
+}
+
+.col1__labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkReturnContainer {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#checkReturn {
+  width: 2rem;
+}
+.green {
+  background-color: green;
+}
+
+.navBottom ul {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navBottom li {
+  margin: 1rem 0px;
+  margin-right: 2rem;
+}

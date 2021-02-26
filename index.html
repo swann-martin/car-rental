@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="section">
+    <section>
       <header>
         <div class="headerContainer">
           <nav>
-            <img
-              src="https://www.europcar.fr/_nuxt/img/europcar-green.569c225.svg"
-              alt="logo"
-            />
+            <h1>
+              <img
+                src="./assets/europcar-greenLogo.569c225.svg"
+                alt="logo Europcar"
+              />
+            </h1>
             <ul>
               <li>
                 <a href="#"><i class="fas fa-globe-europe"> </i> France</a>
@@ -36,29 +38,24 @@
             </ul>
           </nav>
 
-          <h1>
-            Vous cherchez un véhicule?<br />
-            Vous êtes au bon endroit
-          </h1>
+          <h2>Vous cherchez un véhicule?</h2>
+          <h2>Vous êtes au bon endroit</h2>
 
           <form class="rent">
-            <!-- partie seletion de type de voiture -->
-            <label for="carType">Quel type de véhicule?</label>
+            <!-- partie selection de type de voiture -->
+            <label for="carType">Quel type de véhicule&nbsp;?</label>
 
             <div class="selectOptionCars">
               <div class="optionCar">
                 <button>
-                  <img
-                    src="https://static.europcar.com/_nuxt/img/cars-filter.cf7c3fd.png"
-                    alt="car"
-                  />
+                  <img src="./assets/cars-filter.cf7c3fd.png" alt="car" />
                   <span>Voiture</span>
                 </button>
               </div>
               <div class="optionTruck">
                 <button>
                   <img
-                    src="https://static.europcar.com/_nuxt/img/vans-trucks-filter.ae42ce1.png"
+                    src="./assets/vans-trucks-filter.ae42ce1.png"
                     alt="truck"
                   />
                   <span>Utilitaire</span>
@@ -67,7 +64,7 @@
               <div class="optionPrestige">
                 <button>
                   <img
-                    src="https://static.europcar.com/_nuxt/img/prestige-filter.1a1faa9.png"
+                    src="./assets/prestige-filter.1a1faa9.png"
                     alt="prestige"
                   />
                   <span>Prestige</span>
@@ -144,23 +141,29 @@
                   <option value="23">23</option>
                   <option value="24">24</option>
                   <option value="25">25</option>
-                  <option selected value="23">26+</option>
+                  <option selected value="26+">26+</option>
                 </select>
               </div>
               <div>
-                <label for="country">Je réside</label>
+                <label for="country">Je réside en </label>
                 <select name="country" id="country">
+                  <option value="France">France</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="USA">USA</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Italy">Italy</option>
                   <option value=""></option>
                 </select>
               </div>
 
-              <div>
+              <div class="checkboxContainer">
                 <input type="checkbox" id="discount" />
                 <label for="discount"
                   >J'ai un tarif négocié <i class="fas fa-info-circle"></i
                 ></label>
               </div>
-              <button>Rechercher</button>
+              <button type="submit" class="submit">Rechercher</button>
             </div>
           </form>
 
@@ -176,6 +179,7 @@
                   >Remise Privilege <i class="fas fa-arrow-right"></i
                 ></a>
               </li>
+
               <li>
                 <a href="#"
                   >Voir tous les bons plans <i class="fas fa-arrow-right"></i
@@ -191,11 +195,11 @@
         </div>
       </header>
     </section>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-      crossorigin="anonymous"
-    ></script>
+    <section>
+      <p id="response"></p>
+    </section>
+
+    <script src="./jquery.min.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

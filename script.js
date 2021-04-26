@@ -1,17 +1,16 @@
-console.log($(".selectOptionCars button"));
+console.log($(".selectOptionCars .btn"));
 
-// $(".selectOptionCars button").forEach((element) => {
-//   $(element).on("click", (e) => {
-//     console.log(this);
-//     $(e.target).toggleClass("green");
-//   });
-// });
+$(".selectOptionCars .btn").click(function (e) {
+  console.log($(e.taget));
+  $(e.target).toggleClass("green");
+});
 
 $("#dDepart").on("change", () => {
   console.log($("#dDepart").val());
 });
 
-$(".submit").on("click", () => {
+$(".submit").on("click", (e) => {
+  e.preventDefault();
   // Using the core $.ajax() method
   $.ajax({
     url: "connexion.php",

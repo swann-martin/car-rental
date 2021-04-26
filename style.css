@@ -247,9 +247,15 @@ select:focus {
 }
 
 .green {
-  background-color: green !important;
+  background-color: #090 !important;
 }
 
 .red {
   background-color: red !important;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+  height: 5rem;
 }

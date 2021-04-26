@@ -1,3 +1,4 @@
+Allow: GET, POST, HEAD
 <?php
 
 $age = NULL;
@@ -32,7 +33,7 @@ if (isset($_POST['dDepart']) && preg_match("", $_POST['dReturn'])) {
     $dReturn = htmlspecialchars($_POST['dReturn']);
 }
 
-//creation du tableau pour retour de la 
+//creation du tableau pour retour de la REQUETE
 
 $tab = array(
     'age' => $age,
